@@ -7,10 +7,10 @@ import s from './App.module.css';
 import PrivateRoute from 'components/HeaderMenu/PrivateRoute';
 import PublicRouter from 'components/HeaderMenu/PublicRouter';
 
-const HomeView = lazy(() => import('../../views/HomeView'));
-const RegisterView = lazy(() => import('../../views/RegisterView'));
-const LoginView = lazy(() => import('../../views/LoginView'));
-const ContactsView = lazy(() => import('../../views/ContactsView'));
+const HomeView = lazy(() => import('views/HomeView'));
+const RegisterView = lazy(() => import('views/RegisterView'));
+const LoginView = lazy(() => import('views/LoginView'));
+const ContactsView = lazy(() => import('views/ContactsView'));
 
 export default function App() {
   const dispatch = useDispatch();

@@ -13,7 +13,7 @@ import logger from 'redux-logger';
 import storage from 'redux-persist/lib/storage';
 import contactsReducers from './contacts/contacts-reducers';
 import authReduser from '../redux/auth/auth-slice';
-
+console.log(contactsReducers);
 const middleware = [
   ...getDefaultMiddleware({
     serializableCheck: {

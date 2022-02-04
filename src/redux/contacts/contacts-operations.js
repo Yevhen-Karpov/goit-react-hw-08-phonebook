@@ -1,8 +1,10 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import * as contactsApi from '../../services/contactsFetch-api';
-import axios from 'axios';
+// import { useDispatch } from 'react-redux';
+// import axios from 'axios';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+// const dispatch = useDispatch();
 
 const getALLContacts = createAsyncThunk(
   'contacts/getALLContacts',
@@ -10,7 +12,7 @@ const getALLContacts = createAsyncThunk(
     try {
       return await contactsApi.fetchContacts();
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   },
 );
@@ -21,21 +23,19 @@ const addContact = createAsyncThunk(
     try {
       return await contactsApi.fetchAddContact(payload);
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   },
 );
 
 const deleteContact = createAsyncThunk(
   'contacts/deleteContact',
-  async (payload, { rejectWithValue }) => {
-    console.log(payload);
+  async (id, { rejectWithValue, dispatch }) => {
     try {
-      const contact = await contactsApi.fetchDeleteContact(payload);
-      console.log(contact);
-      return contact;
+      await contactsApi.fetchDeleteContact(id);
+      // dispatch(deleteContact.fulfilled(id));
     } catch (error) {
-      return rejectWithValue(error);
+      return rejectWithValue(error.message);
     }
   },
 );

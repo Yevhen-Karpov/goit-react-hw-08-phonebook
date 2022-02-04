@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
+// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
 
 export async function fetchContacts() {
   const { data } = await axios.get('/contacts');
@@ -12,10 +12,10 @@ export async function fetchAddContact(payload) {
   console.log(data);
   return data;
 }
-export async function fetchDeleteContact(id) {
-  const { data } = await axios.delete(`/contacts/${id}`);
-  console.log(data);
-  return data;
+export async function fetchDeleteContact(value) {
+  const response = await axios.delete(`/contacts/${value}`);
+  console.log(response);
+  return response.data;
 }
 // export async function fetchContacts() {
 //   const { data } = await axios.get('/contacts');
