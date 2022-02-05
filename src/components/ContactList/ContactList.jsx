@@ -40,13 +40,6 @@ export default function ContactList() {
           >
             Delete
           </Button>
-          {/* <button
-            className={s.button}
-            type="button"
-            onClick={() => onDeleteContact(id)}
-          >
-            Delete
-          </button> */}
         </li>
       ))}
     </ul>

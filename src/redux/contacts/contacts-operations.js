@@ -33,7 +33,7 @@ const deleteContact = createAsyncThunk(
   async (id, { rejectWithValue, dispatch }) => {
     try {
       await contactsApi.fetchDeleteContact(id);
-      // dispatch(deleteContact.fulfilled(id));
+      dispatch(deleteContact.fulfilled(id));
     } catch (error) {
       return rejectWithValue(error.message);
     }
