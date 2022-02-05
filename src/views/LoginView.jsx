@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import authOperations from '../redux/auth/auth-operations';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 import s from '../components/Form/Form.module.css';
 // import { yupResolver } from '@hookform/resolvers';
 // import * as yup from 'yup';
@@ -32,8 +35,52 @@ export default function LoginView() {
 
   return (
     <div>
-      <form className={s.form} onSubmit={handleSubmit}>
-        <label className={s.label}>
+      <h1>Log in</h1>
+      <form className={s.formRegistr} onSubmit={handleSubmit}>
+        <TextField
+          style={{
+            width: '300px',
+            padding: '8px',
+            display: 'block',
+            marginTop: '20px',
+            marginBottom: '20px',
+            borderRadius: 8,
+          }}
+          required
+          id="outlined-email"
+          label="Email"
+          color="primary"
+          fullWidth
+          focused
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
+        <TextField
+          style={{
+            width: '300px',
+            padding: '8px',
+            display: 'block',
+            marginTop: '20px',
+            marginBottom: '20px',
+            borderRadius: 8,
+          }}
+          required
+          id="outlined-password"
+          label="Password"
+          color="primary"
+          fullWidth
+          focused
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
+        <Button variant="contained" endIcon={<SendIcon />} type="submit">
+          Log in
+        </Button>
+        {/* <label className={s.label}>
           Email
           <br />
           <input
@@ -61,7 +108,7 @@ export default function LoginView() {
         </label>
         <button className={s.button} type="submit">
           Login
-        </button>
+        </button> */}
       </form>
     </div>
   );

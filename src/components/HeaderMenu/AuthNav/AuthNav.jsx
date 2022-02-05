@@ -11,7 +11,7 @@ export default function AuthNav() {
       color: '#2A363B',
     },
     activeLink: {
-      color: '#E84A5F',
+      color: '#D5561F',
     },
   };
 

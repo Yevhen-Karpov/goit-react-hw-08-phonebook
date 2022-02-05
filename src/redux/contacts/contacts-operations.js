@@ -1,10 +1,5 @@
 import { createAsyncThunk } from '@reduxjs/toolkit';
 import * as contactsApi from '../../services/contactsFetch-api';
-// import { useDispatch } from 'react-redux';
-// import axios from 'axios';
-
-// axios.defaults.baseURL = 'https://connections-api.herokuapp.com';
-// const dispatch = useDispatch();
 
 const getALLContacts = createAsyncThunk(
   'contacts/getALLContacts',

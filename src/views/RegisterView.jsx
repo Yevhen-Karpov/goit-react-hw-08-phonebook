@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import authOperations from '../redux/auth/auth-operations';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
 import s from '../components/Form/Form.module.css';
 
 export default function RegisterView() {
@@ -32,52 +35,74 @@ export default function RegisterView() {
 
   return (
     <div>
-      <form className={s.form} onSubmit={handleSubmit}>
-        <label className={s.label}>
-          Name
-          <br />
-          <input
-            className={s.input}
-            type="text"
-            name="name"
-            value={name}
-            pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
-            title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-            onChange={handleChange}
-          />
-        </label>
-        <label className={s.label}>
-          Email
-          <br />
-          <input
-            className={s.input}
-            type="email"
-            name="email"
-            value={email}
-            pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-            onChange={handleChange}
-          />
-        </label>
-        <label className={s.label}>
-          Password
-          <br />
-          <input
-            className={s.input}
-            type="password"
-            name="password"
-            value={password}
-            // pattern="/(?=.*[0-9])(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z!@#$%^&*]{6,}/g"
-            // title="Name may contain only letters, apostrophe, dash and spaces. For example Adrian, Jacob Mercer, Charles de Batz de Castelmore d'Artagnan"
-            required
-            onChange={handleChange}
-          />
-        </label>
-        <button className={s.button} type="submit">
-          Register
-        </button>
+      <h1>Register</h1>
+      <form className={s.formRegistr} onSubmit={handleSubmit}>
+        <TextField
+          style={{
+            width: '300px',
+            padding: '8px',
+            display: 'block',
+            marginTop: '10px',
+            marginBottom: '10px',
+            borderRadius: 8,
+          }}
+          required
+          id="outlined-name"
+          label="Name"
+          color="primary"
+          fullWidth
+          focused
+          type="text"
+          name="name"
+          value={name}
+          onChange={handleChange}
+        />
+
+        <TextField
+          style={{
+            width: '300px',
+            padding: '8px',
+            display: 'block',
+            marginTop: '10px',
+            marginBottom: '10px',
+            borderRadius: 8,
+          }}
+          required
+          id="outlined-email"
+          label="Email"
+          color="primary"
+          fullWidth
+          focused
+          type="email"
+          name="email"
+          value={email}
+          onChange={handleChange}
+        />
+
+        <TextField
+          style={{
+            width: '300px',
+            padding: '8px',
+            display: 'block',
+            marginTop: '10px',
+            marginBottom: '10px',
+            borderRadius: 8,
+          }}
+          required
+          id="outlined-password"
+          label="Password"
+          color="primary"
+          fullWidth
+          focused
+          type="password"
+          name="password"
+          value={password}
+          onChange={handleChange}
+        />
+
+        <Button variant="contained" endIcon={<SendIcon />} type="submit">
+          Log up
+        </Button>
       </form>
     </div>
   );

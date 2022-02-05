@@ -53,8 +53,8 @@ export default function Form() {
             width: '300px',
             padding: '8px',
             display: 'block',
-            marginTop: '20px',
-            marginBottom: '20px',
+            marginTop: '10px',
+            marginBottom: '10px',
             borderRadius: 8,
           }}
           required
@@ -74,8 +74,8 @@ export default function Form() {
             width: '300px',
             padding: '8px',
             display: 'block',
-            marginTop: '20px',
-            marginBottom: '20px',
+            marginTop: '10px',
+            marginBottom: '10px',
             borderRadius: 8,
           }}
           required
@@ -93,7 +93,7 @@ export default function Form() {
           style={{
             width: '300px',
             marginTop: '20px',
-            marginBottom: '20px',
+            marginBottom: '10px',
             borderRadius: 8,
           }}
           color="primary"
