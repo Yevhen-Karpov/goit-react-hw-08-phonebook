@@ -5,8 +5,6 @@ import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import s from '../components/Form/Form.module.css';
-// import { yupResolver } from '@hookform/resolvers';
-// import * as yup from 'yup';
 
 export default function LoginView() {
   const dispatch = useDispatch();
@@ -51,12 +49,13 @@ export default function LoginView() {
           label="Email"
           color="primary"
           fullWidth
-          focused
           type="email"
           name="email"
           value={email}
           onChange={handleChange}
+          pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
         />
+
         <TextField
           style={{
             width: '300px',
@@ -71,44 +70,15 @@ export default function LoginView() {
           label="Password"
           color="primary"
           fullWidth
-          focused
           type="password"
           name="password"
           value={password}
           onChange={handleChange}
         />
+
         <Button variant="contained" endIcon={<SendIcon />} type="submit">
           Log in
         </Button>
-        {/* <label className={s.label}>
-          Email
-          <br />
-          <input
-            className={s.input}
-            type="email"
-            name="email"
-            value={email}
-            pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
-            title="Phone number must be digits and can contain spaces, dashes, parentheses and can start with +"
-            required
-            onChange={handleChange}
-          />
-        </label>
-        <label className={s.label}>
-          Password
-          <br />
-          <input
-            className={s.input}
-            type="password"
-            name="password"
-            value={password}
-            required
-            onChange={handleChange}
-          />
-        </label>
-        <button className={s.button} type="submit">
-          Login
-        </button> */}
       </form>
     </div>
   );

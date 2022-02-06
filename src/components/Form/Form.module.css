@@ -4,15 +4,13 @@
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 300px;
-  /* border: 1px solid rgb(18, 137, 184); */
+  padding-top: 20px;
+  padding-bottom: 30px;
   border-radius: 18px;
-  margin-right: 16px;
   background-image: linear-gradient(
     rgba(255, 255, 255, 0.3),
     rgba(255, 255, 255, 0.3)
   );
-  /* padding: 0 100px; */
 }
 .formRegistr {
   display: flex;
@@ -20,8 +18,9 @@
   justify-content: center;
   align-items: center;
   width: 500px;
-  height: 400px;
-  /* border: 1px solid rgb(18, 137, 184); */
+  /* height: 400px; */
+  padding-top: 20px;
+  padding-bottom: 30px;
   border-radius: 18px;
   margin: 16px auto;
   background-image: linear-gradient(
@@ -29,35 +28,3 @@
     rgba(255, 255, 255, 0.7)
   );
 }
-/* 
-.label {
-  display: block;
-  text-align: center;
-  font-weight: 700;
-} */
-
-/* .input {
-  width: 300px;
-  padding: 8px;
-  display: block;
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border-radius: 8px;
-} */
-
-/* .button {
-  width: 100px;
-  height: 30px;
-  border: none;
-  border-radius: 10px;
-  background-color: rgb(67, 58, 151);
-  cursor: pointer;
-  color: azure;
-}
-.button:hover {
-  background-color: rgb(35, 13, 228);
-}
-.input:hover,
-.input:focus {
-  border-color: rgb(35, 13, 228);
-} */

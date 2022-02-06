@@ -1,4 +1,3 @@
-// import { buildQueries } from '@testing-library/react';
 import React from 'react';
 
 const styles = {
@@ -8,21 +7,18 @@ const styles = {
     alignItems: 'center',
     justifyContent: 'center',
   },
+
   title: {
     fontWeight: 500,
-    fontSize: 48,
+    fontSize: 108,
     textAlign: 'center',
+    color: '#154584',
   },
 };
 
 const HomeView = () => (
   <div style={styles.container}>
-    <h1 style={styles.title}>
-      Приветственная страница нашего сервиса{' '}
-      <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
-      </span>
-    </h1>
+    <h1 style={styles.title}>WELCOM TO PHONEBOOK</h1>
   </div>
 );
 

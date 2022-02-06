@@ -51,7 +51,6 @@ export default function RegisterView() {
           label="Name"
           color="primary"
           fullWidth
-          focused
           type="text"
           name="name"
           value={name}
@@ -72,11 +71,11 @@ export default function RegisterView() {
           label="Email"
           color="primary"
           fullWidth
-          focused
           type="email"
           name="email"
           value={email}
           onChange={handleChange}
+          pattern="^([a-z0-9_-]+\.)*[a-z0-9_-]+@[a-z0-9_-]+(\.[a-z0-9_-]+)*\.[a-z]{2,6}$"
         />
 
         <TextField
@@ -93,7 +92,6 @@ export default function RegisterView() {
           label="Password"
           color="primary"
           fullWidth
-          focused
           type="password"
           name="password"
           value={password}

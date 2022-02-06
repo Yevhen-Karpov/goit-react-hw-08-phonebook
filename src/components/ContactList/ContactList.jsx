@@ -31,6 +31,7 @@ export default function ContactList() {
           <p className={s.listItemText}>
             {name}: <span className={s.listItemText}>{number}</span>
           </p>
+
           <Button
             variant="outlined"
             startIcon={<DeleteIcon />}

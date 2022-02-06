@@ -13,11 +13,3 @@ export const getVisibleContacts = createSelector(
     );
   },
 );
-
-// const contactsSelectors = {
-//   getContacts,
-//   getFilter,
-//   getVisibleContacts,
-// };
-
-// export default contactsSelectors;

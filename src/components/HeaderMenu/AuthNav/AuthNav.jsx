@@ -8,7 +8,7 @@ export default function AuthNav() {
       textDecoration: 'none',
       padding: 12,
       fontWeight: 700,
-      color: '#2A363B',
+      color: '#dde9ee',
     },
     activeLink: {
       color: '#D5561F',
@@ -25,6 +25,7 @@ export default function AuthNav() {
       >
         Register
       </NavLink>
+
       <NavLink
         to="/login"
         exact

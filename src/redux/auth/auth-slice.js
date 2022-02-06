@@ -19,11 +19,13 @@ const authSlice = createSlice({
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+
     [authOperations.logIn.fulfilled](state, action) {
       state.user = action.payload.user;
       state.token = action.payload.token;
       state.isLoggedIn = true;
     },
+
     [authOperations.logOut.fulfilled](state, _action) {
       state.user = {
         name: null,
@@ -32,10 +34,12 @@ const authSlice = createSlice({
       state.token = null;
       state.isLoggedIn = false;
     },
+
     [authOperations.refreshCurrentUser.fulfilled](state, action) {
       state.user = action.payload;
       state.isLoggedIn = true;
     },
   },
 });
+
 export default authSlice.reducer;

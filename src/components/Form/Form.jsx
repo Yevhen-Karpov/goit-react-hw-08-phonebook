@@ -62,7 +62,6 @@ export default function Form() {
           label="Name"
           color="primary"
           fullWidth
-          focused
           type="text"
           name="name"
           value={name}
@@ -83,11 +82,11 @@ export default function Form() {
           label="Phone"
           color="primary"
           fullWidth
-          focused
-          type="text"
+          type="tel"
           name="number"
           value={number}
           onChange={handleNumberChange}
+          helperText="Phone number 0XX XXX XX XX"
         />
         <LoadingButton
           style={{
