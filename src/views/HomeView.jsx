@@ -18,7 +18,7 @@ const styles = {
 
 const HomeView = () => (
   <div style={styles.container}>
-    <h1 style={styles.title}>WELCOM TO PHONEBOOK</h1>
+    <h1 style={styles.title}>WELCOME TO PHONEBOOK</h1>
   </div>
 );
 
